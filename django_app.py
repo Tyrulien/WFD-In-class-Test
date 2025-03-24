@@ -20,10 +20,11 @@ if not settings.configured:
             'django.contrib.contenttypes',
             'django.contrib.staticfiles',
         ),
+        STATIC_URL='/static/',  # Added STATIC_URL setting
     )
 
 def index(request):
-    return HttpResponse("Hello, this is a minimal Django app for Part C.")
+    return HttpResponse("Status: Working")
 
 urlpatterns = [
     path('', index),

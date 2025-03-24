@@ -27,7 +27,7 @@ class DjangoAppTests(SimpleTestCase):
         """Test that the index view returns the expected content."""
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn("minimal Django app", response.content.decode())
+        self.assertIn("Status: Working", response.content.decode())
 
 if __name__ == '__main__':
     # Run the tests when the file is executed.
